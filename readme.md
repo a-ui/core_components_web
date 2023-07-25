@@ -1,35 +1,29 @@
-# ACPaaS UI - Web Components
+# AUI - Web components
 
 ## Introduction
 
-Antwerp City Platform as a Service User Interface (ACPaas UI) is a **component interface library** for building user interfaces and responsive web apps. It's designed to provide developers with functionality and UI/UX patterns that matches the Antwerpen styleguide.
-
-
-## Ecosystem
-
-This library is part of [ACPaaS UI](https://acpaas-ui.digipolis.be).
-
+Web Components using Core Branding 6.x.x. Npm repo: https://www.npmjs.com/package/@a-ui/web-components.
 
 ## Getting Started
 
 ### Running the project locally
 
 ```shell
-npm i
+npm ci
 npm start
 ```
 
-### Use ACPaaS UI web components in your project
+### Use web components in your project
 
 ```shell
-npm install @acpaas-ui/web-components
+npm install @a-ui/web-components
 ```
 
 > Scroll down for a list with all available components.
 
 To integrate these web components in your framework of choice, please [follow the steps explained here](https://stenciljs.com/docs/overview).
 
-Use polyfills for older browers and browsers that not support web components. To make ACPaaS UI work in these browsers, you need to include the following scripts before you load your web component:
+Use polyfills for older browers and browsers that not support web components. To make our web components work in these browsers, you need to include the following scripts before you load your web component:
 
 ```html
 <script src="//polyfill.io/v3/polyfill.min.js"></script>
@@ -51,11 +45,11 @@ This library contains the following components:
 
 ## Styling
 
-Use [one of our brandings](https://github.com/a-ui/) to adhere to the styling guidelines:
+Use [one of our brandings](https://github.com/a-ui) to adhere to the styling guidelines:
 
 ```html
 // Antwerp core branding
-<link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/6.2.3/main.min.css">
+<link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/6.4.0/main.min.css">
 
 If needed, you can add a branding-compatible [flexbox grid layout system](https://github.com/a-ui/core_flexboxgrid_scss):
 
@@ -63,7 +57,7 @@ If needed, you can add a branding-compatible [flexbox grid layout system](https:
 <link rel="stylesheet" href="https://cdn.antwerpen.be/core_flexboxgrid_scss/3.0.0/flexboxgrid.min.css">
 ```
 
-For other styling-related things, like e.g. favicons, [check out GitHub](https://github.com/a-ui/).
+For other styling-related things, like e.g. favicons, [check out GitHub](https://github.com/a-ui).
 
 
 ## Changelog
@@ -71,25 +65,17 @@ For other styling-related things, like e.g. favicons, [check out GitHub](https:/
 Detailed changes for each release are documented in the [changelog](./CHANGELOG.md).
 
 
-## Questions
-
-For questions and support please ask a question on the [#acpaas-ui slack channel](https://digantcafe.slack.com/messages/CDDLYJU65/). If you're not yet a member of our DigAnt Café slack community, you can easily [join here](https://digantcafe-slack.digipolis.be).
-
-If you stumble across a bug or missing feature, feel free to [report an issue](https://github.com/digipolisantwerp/acpaas-ui_web-components/issues).
-
-
 ## Contributing
 
-Bug reports and or pull requests are always welcome.
 Please read our [contribution guide](CONTRIBUTING.md).
+
 
 ## Support
 
-Wim Vanhorenbeeck (<wim.vanhorenbeeck@digipolis.be>)
+- Jasper Van Proeyen (<jasper.vanproeyen@digipolis.be>)
+- Jeroen Collier (<jeroen.collier@antwerpen.be>)
 
 
 ## License
 
 [MIT](./LICENSE.md)
-
-Copyright (c) 2020 Digipolis
