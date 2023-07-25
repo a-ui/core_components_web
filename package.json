@@ -1,6 +1,6 @@
 {
   "name": "@acpaas-ui/web-components",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "AUI web components",
   "author": "Digipolis Antwerpen",
   "main": "dist/index.cjs.js",
