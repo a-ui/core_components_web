@@ -69,7 +69,7 @@
   }
   cookieConsent.config = `{
     "title": "Cookies antwerpen.be",
-    "intro": "Antwerpen.be gebruikt cookies. Als je optionele cookies weigert, worden alleen cookies geplaatst die nodig zijn voor de werking van de site. Bepaalde inhoud (zoals van YouTube en Twitter) is alleen beschikbaar als je marketingcookies aanvaardt via ‘Alle cookies aanvaarden’ of ‘Voorkeuren instellen’. Je kan je cookievoorkeuren altijd aanpassen via ‘Cookies’ onderaan de website. Lees onze <a href='https://www.antwerpen.be/nl/info/5e9d5a6cd93901b20b3a2b82/cookiebeleid' target='_blank'>cookieverklaring</a> als je er meer over wil weten.",
+    "intro": "Antwerpen.be gebruikt cookies. Als je optionele cookies weigert, worden alleen cookies geplaatst die nodig zijn voor de werking van de site. Bepaalde inhoud (zoals van YouTube) is alleen beschikbaar als je marketingcookies aanvaardt via ‘Alle cookies aanvaarden’ of ‘Voorkeuren instellen’. Je kan je cookievoorkeuren altijd aanpassen via ‘Cookies’ onderaan de website. Lees onze <a href='https://www.antwerpen.be/nl/info/5e9d5a6cd93901b20b3a2b82/cookiebeleid' target='_blank'>cookieverklaring</a> als je er meer over wil weten.",
     "nonBlocking": false,
     "cookiePolicy": "https://www.antwerpen.be/info/cookiebeleid-antwerpenbe",
     "cookieConfig": [
@@ -77,7 +77,7 @@
         "name": "Noodzakelijk",
         "showSwitch": false,
         "enabled": true,
-        "description": "Noodzakelijke cookies zijn cookies die ervoor zorgen dat alle onderdelen van de website goed werken.",
+        "description": "Noodzakelijke cookies zijn cookies die ervoor zorgen dat alle onderdelen van de website goed werken. Je kan deze niet toestaan of weigeren.",
         "open": false,
         "cookies": [
           {
@@ -95,20 +95,20 @@
           {
             "cookie": "authsessionid",
             "type": "Eerste partij",
-            "duration": "sessie",
-            "description": "Deze cookie wordt gebruikt om de gebruiker op de huidige webpagina te kunnen identificeren."
+            "duration": "8 uur",
+            "description": "Deze cookie identificeert de gebruiker op de huidige webpagina. De duurtijd wordt verlengd als je actief blijft op de site."
           },
           {
             "cookie": "dgp.auth.ssoKey",
             "type": "Eerste partij",
             "duration": "1 jaar",
-            "description": "dgp.auth.ssoKey plaatst cookies op je computer die gebruikt worden om je laatst gebruikte aanmeldkeuze of het laatst gekozen authenticatiemiddel te onthouden."
+            "description": "dgp.auth.ssoKey plaatst cookies op je computer om je laatst gebruikte aanmeldkeuze of het laatst gekozen authenticatiemiddel te onthouden."
           },
           {
-            "cookie": "cookieconsent_prod",
+            "cookie": "cookiepreferences_prod",
             "type": "Eerste partij",
-            "duration": "7 dagen",
-            "description": "Antwerpen geeft een overzicht van de cookie-informatie die je als gebruiker deelt met antwerpen.be."
+            "duration": "1 jaar",
+            "description": "Deze cookie houdt je cookievoorkeuren bij."
           }
         ]
       },
@@ -123,7 +123,7 @@
             "cookie": "Google analytics",
             "type": "Derde partij",
             "duration": "1 minuut tot 2 jaar",
-            "description": "Analytische cookies meten het websitebezoek. Deze gegevens laten ons toe om de structuur, navigatie en inhoud van onze website te verbeteren.",
+            "description": "Google Analytics plaatst cookies om het websitebezoek te meten en de paginaweergaven te tellen. Deze gegevens laten ons toe om de structuur, navigatie en inhoud van onze website te verbeteren.",
             "subCookies": [
               {
                 "name": "_ga",
@@ -151,16 +151,20 @@
                 "duration": "1 jaar"
               },
               {
+                "name": "_hjAbsoluteSessionInProgress",
+                "duration": "30 minuten"
+              },
+              {
                 "name": "_hjTLDTest",
                 "duration": "sessie"
               },
               {
-                "name": "_hjIncludedInSample",
-                "duration": "1 jaar"
-              },
-              {
                 "name": "_hjCachedUserAttributes",
                 "duration": "sessie"
+              },
+              {
+                "name": "_hjIncludedInPageviewSample",
+                "duration": "2 minuten"
               }
             ]
           }
@@ -170,34 +174,34 @@
         "name": "Marketing",
         "showSwitch": true,
         "enabled": false,
-        "description": "U dient marketing cookies in te schakelen om op de website inhoud te tonen die afkomstig is van derde partijen zoals Youtube, Soundcloud of Twitter.",
+        "description": "Je moet marketing-cookies inschakelen om op de website inhoud te tonen die afkomstig is van derde partijen zoals YouTube of Soundcloud.",
         "open": false,
         "cookies": [
           {
             "cookie": "Youtube",
             "type": "Derde partij",
-            "duration": "sessie - 5 maanden",
-            "description": "Via de dienst YouTube kan je video’s bekijken die we op antwerpen.be plaatsen. YouTube zet mogelijk één of meerdere cookies op je computer om je surfgedrag te registreren en om voor jou relevante video’s te kunnen suggereren. Deze cookie wordt gezet door YouTube en is noodzakelijk voor het gebruik van deze functionaliteit.",
+            "duration": "sessie - 6 maanden",
+            "description": "Via de dienst YouTube kan je video’s bekijken die we op antwerpen.be plaatsen. YouTube zet mogelijk één of meerdere cookies op je computer om je surfgedrag te registreren en om voor jou relevante video’s te kunnen suggereren. Deze cookies worden gezet door YouTube en zijn noodzakelijk voor het gebruik van deze functionaliteit.",
             "subCookies": [
               {
                 "name": "VISITOR_INFO1_LIVE",
-                "duration": "5 maanden"
+                "duration": "6 maanden"
               },
               {
-                "name": "YSC",
+                "name": "YouTube YSC",
                 "duration": "sessie"
               },
               {
-                "name": "GPS",
-                "duration": "30 minuten"
+                "name": "YouTube GPS",
+                "duration": "sessie"
               }
             ]
           },
           {
-            "cookie": "Crowdsignal _uetsid",
+            "cookie": "Crowdsignal",
             "type": "Derde partij",
             "duration": "1 dag",
-            "description": "Via antwerpen.be verzamelt stad Antwerpen graag je mening of stem om de dienstverlening van de stad te optimaliseren. We gebruiken hiervoor de dienst Crowdsignal. Zij plaatsen één of meerdere cookies op je computer om je stem bij te houden. Deze cookie wordt gezet door Crowdsignal en is noodzakelijk voor het gebruik van deze functionaliteit."
+            "description": "Via antwerpen.be verzamelt stad Antwerpen graag je mening of stem om de dienstverlening van de stad te optimaliseren. We gebruiken hiervoor de dienst Crowdsignal. Zij plaatsen één of meerdere cookies op je computer om je stem bij te houden. Deze cookies worden gezet door Crowdsignal en zijn noodzakelijk voor het gebruik van deze functionaliteit."
           },
           {
             "cookie": "Twitter",
@@ -214,15 +218,15 @@
           {
             "cookie": "Spotify",
             "type": "Derde partij",
-            "duration": "1 jaar",
-            "description": "Je kan de Spotify-service gebruiken om te luisteren naar audio die we op antwerpen.be plaatsen. Spotify kan een of meer cookies plaatsen om gebruikersinteractie en voorkeuren in context met audio-inhoud te registreren. Dit kan dienen voor statistieken en marketingdoeleinden. Deze cookie wordt geplaatst door Spotify en is noodzakelijk om deze functionaliteit te gebruiken.",
+            "duration": "1 dag - 1 jaar",
+            "description": "Je kan de Spotify-service gebruiken om te luisteren naar audio die we op antwerpen.be plaatsen. Spotify kan een of meer cookies plaatsen om gebruikersinteractie en voorkeuren in context met audio-inhoud te registreren. Dit kan dienen voor statistieken en marketingdoeleinden. Deze cookies worden geplaatst door Spotify en zijn noodzakelijk om deze functionaliteit te gebruiken.",
             "subCookies": [
               {
-                "name": "Sp_t",
-                "duration": "1 jaar"
+                "name": "Spotify Sp_landing",
+                "duration": "1 dag"
               },
               {
-                "name": "Sp_landing",
+                "name": "Spotify Sp_t",
                 "duration": "1 jaar"
               }
             ]
@@ -231,15 +235,15 @@
             "cookie": "Google DoubleClick IDE",
             "type": "Derde partij",
             "duration": "1.5 jaar",
-            "description": "Google DoubleClick plaatst automatisch een cookie omdat er YouTube filmpjes embed zijn in antwerpen.be. De cookie trackt over verschillende websites heen welke advertenties er getoond worden in een browser. Zo weet een adverteerder hoe vaak zijn advertentie getoond werd. Noot: op antwerpen.be worden geen advertenties getoond. ",
+            "description": "Google DoubleClick plaatst automatisch een cookie omdat er YouTube-filmpjes geëmbed zijn in antwerpen.be. De cookie trackt over verschillende websites heen welke advertenties er getoond worden in een browser. Zo weet een adverteerder hoe vaak zijn advertentie getoond werd. Noot: op antwerpen.be worden geen advertenties getoond.",
             "subCookies": [
               {
                 "name": "ID",
-                "duration": "1.5 jaar"
+                "duration": "1,5 jaar"
               },
               {
                 "name": "DSID",
-                "duration": "1.5 jaar"
+                "duration": "1,5 jaar"
               }
             ]
           }
