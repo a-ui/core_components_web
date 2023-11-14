@@ -7,20 +7,20 @@
 
 ## Properties
 
-| Property       | Attribute     | Description                                           | Type                    | Default     |
-| -------------- | ------------- | ----------------------------------------------------- | ----------------------- | ----------- |
-| `branding`     | `branding`    | Extra CSS class(es) to add                            | `string`                | `'aui'`     |
-| `description`  | `description` | A paragraph text to explain the content blocker title | `string`                | `undefined` |
-| `icon`         | `icon`        | The icon name (eg: ai-close)                          | `string`                | `undefined` |
-| `message`      | `message`     | The content blocker title                             | `string`                | `undefined` |
-| `translations` | --            | Set the translation strings for the content blocker   | `TranslationsInterface` | `undefined` |
+| Property       | Attribute      | Description                                           | Type     | Default     |
+| -------------- | -------------- | ----------------------------------------------------- | -------- | ----------- |
+| `branding`     | `branding`     | Extra CSS class(es) to add                            | `string` | `'aui'`     |
+| `description`  | `description`  | A paragraph text to explain the content blocker title | `string` | `undefined` |
+| `icon`         | `icon`         | The icon name (eg: ai-close)                          | `string` | `undefined` |
+| `message`      | `message`      | The content blocker title                             | `string` | `undefined` |
+| `translations` | `translations` | Set the translation strings for the content blocker   | `string` | `''`        |
 
 
 ## CSS Custom Properties
 
 | Name                                                                                                            | Description |
 | --------------------------------------------------------------------------------------------------------------- | ----------- |
-| `--screen-xxl = max-width of u-container + width of official logo * 2 + space between logo and u-container * 2` |             |
+| `--SCREEN-XXL = max-width of u-container + width of official logo * 2 + space between logo and u-container * 2` |             |
 
 
 ## Dependencies

@@ -19,7 +19,7 @@ export class Icon {
     if (!fetch) return;
 
     try {
-      const xlinkHref = 'https://cdn.antwerpen.be/core_branding_scss/6.2.3/assets/images/ai.svg';
+      const xlinkHref = 'https://cdn.antwerpen.be/core_branding_scss/6.5.0/assets/images/ai.svg';
       const response = await fetch(xlinkHref);
       const svgText = await response.text();
 

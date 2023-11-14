@@ -7,8 +7,8 @@ import * as CookieConsentStory from './cookie-consent.stories';
 
 ```html
 <aui-cookie-consent
-  config={configObject}
-  translations={translationsObject}
+  config="configObject"
+  translations="translationsObject"
 ></aui-cookie-consent>
 ```
 
@@ -19,7 +19,7 @@ import * as CookieConsentStory from './cookie-consent.stories';
 Example of config JSON object:
 
 ```json
-{
+JSON.stringify({
 	"title": "Cookies antwerpen.be",
 	"intro": "Antwerpen.be gebruikt cookies. Als je optionele cookies weigert, worden alleen cookies geplaatst die nodig zijn voor de werking van de site. Bepaalde inhoud (zoals van YouTube en Twitter) is alleen beschikbaar als je marketingcookies aanvaardt via ‘Alle cookies aanvaarden’ of ‘Voorkeuren instellen’. Je kan je cookievoorkeuren altijd aanpassen via ‘Cookies’ onderaan de website. Lees onze <a href='https://www.antwerpen.be/nl/info/5e9d5a6cd93901b20b3a2b82/cookiebeleid' target='_blank'>cookieverklaring</a> als je er meer over wil weten.",
   "nonBlocking": false,
@@ -122,11 +122,11 @@ Example of config JSON object:
 			"name": "Marketing",
 			"showSwitch": true,
 			"enabled": false,
-			"description": "U dient marketing cookies in te schakelen om op de website inhoud te tonen die afkomstig is van derde partijen zoals Youtube, Soundcloud of Twitter.",
+			"description": "U dient marketing cookies in te schakelen om op de website inhoud te tonen die afkomstig is van derde partijen zoals YouTube, Soundcloud of Twitter.",
 			"open": false,
 			"cookies": [
 				{
-					"cookie": "Youtube",
+					"cookie": "YouTube",
 					"type": "Derde partij",
 					"duration": "sessie - 5 maanden",
 					"description": "Via de dienst YouTube kan je video’s bekijken die we op antwerpen.be plaatsen. YouTube zet mogelijk één of meerdere cookies op je computer om je surfgedrag te registreren en om voor jou relevante video’s te kunnen suggereren. Deze cookie wordt gezet door YouTube en is noodzakelijk voor het gebruik van deze functionaliteit.",
@@ -198,19 +198,19 @@ Example of config JSON object:
 			]
 		}
 	]
-}
+})
 ```
 
 Example of translations JSON object:
 
 ```json
-{
+JSON.stringify({
   buttonAccept: "Alle cookies aanvaarden",
   buttonReject: "Optionele cookies weigeren",
   buttonSetup: "Voorkeuren instellen",
   buttonBack: "Terug",
   textCookieTypes: "Soorten cookies",
-  textCookiePolicy: "Lees het volledige cookiebeleid",
+  textCookiePolicy: "Lees onze cookie-verklaring",
   buttonSaveSettings: "Voorkeuren opslaan",
   tableHeaderCookie: "Cookie",
   tableHeaderType: "Type",
@@ -219,5 +219,5 @@ Example of translations JSON object:
   textAlwaysOn: "Altijd ingeschakeld",
   textOn: "Ingeschakeld",
   textOff: "Uitgeschakeld",
-}
+})
 ```

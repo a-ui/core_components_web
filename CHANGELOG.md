@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+### Changed
+- `core` Upgraded to core branding v6.5.x
+
+### Fixed
+- `cookie-content` Fixed a bug in React where translations would not parse
+- `cookie-content-blocker` Fixed a bug in React where translations would not parse
+
 
 ## 3.0.0 - 2023-07-25
 

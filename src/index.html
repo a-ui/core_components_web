@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>AUI Web components playground</title>
 
-  <link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/6.2.3/main.min.css">
+  <link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/6.5.0/main.min.css">
   <link rel="stylesheet" href="https://cdn.antwerpen.be/core_flexboxgrid_scss/3.0.0/flexboxgrid.min.css">
 
   <script type="module" src="/build/aui-web-components.esm.js"></script>
@@ -18,13 +18,13 @@
   <div class="content">
     <div classs="row">
       <div class="col-xs-12 col-md-8 component">
-        <h5>Youtube filmpje met icoon:</h5>
+        <h5>YouTube filmpje met icoon:</h5>
         <aui-cookie-content-blocker message="Dit filmpje kan niet getoond worden" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo metus, sollicitudin nec tincidunt quis, gravida et ex. Nullam blandit, quam in aliquet convallis, nisi justo rutrum odio, eu sodales nisl purus sit amet odio." icon="ai-social-video-youtube-clip"></aui-cookie-content-blocker>
       </div>
     </div>
     <div classs="row">
       <div class="col-xs-12 col-md-8 component">
-        <h5>Youtube filmpje zonder icoon:</h5>
+        <h5>YouTube filmpje zonder icoon:</h5>
         <aui-cookie-content-blocker class="change" message="Dit filmpje kan niet getoond worden" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo metus, sollicitudin nec tincidunt quis, gravida et ex. Nullam blandit, quam in aliquet convallis, nisi justo rutrum odio, eu sodales nisl purus sit amet odio."></aui-cookie-content-blocker>
       </div>
     </div>
@@ -42,16 +42,16 @@
 <script>
   //Test cookie content blocker overrides
   const cookieContentBlocker = document.querySelector('aui-cookie-content-blocker.change');
-  cookieContentBlocker.translations = {
+  cookieContentBlocker.translations = JSON.stringify({
     buttonOpenCookieSettings: "Instellingen veranderen",
-  }
+  });
 
   //Test cookie consent overrides
   const cookieConsent = document.querySelector('aui-cookie-consent');
   cookieConsent.preferencesSaved = function (params) {
     console.log(params);
   }
-  cookieConsent.translations = {
+  cookieConsent.translations = JSON.stringify({
     buttonAccept: "Alle cookies accepteren!",
     buttonReject: "Geen cookies voor mij!",
     buttonSetup: "Instellingen bekijken!",
@@ -66,8 +66,8 @@
     textAlwaysOn: "Altijd aan!",
     textOn: "Aan!",
     textOff: "Uit!",
-  }
-  cookieConsent.config = `{
+  });
+  cookieConsent.config = JSON.stringify({
     "title": "Cookies antwerpen.be",
     "intro": "Antwerpen.be gebruikt cookies. Als je optionele cookies weigert, worden alleen cookies geplaatst die nodig zijn voor de werking van de site. Bepaalde inhoud (zoals van YouTube) is alleen beschikbaar als je marketingcookies aanvaardt via ‘Alle cookies aanvaarden’ of ‘Voorkeuren instellen’. Je kan je cookievoorkeuren altijd aanpassen via ‘Cookies’ onderaan de website. Lees onze <a href='https://www.antwerpen.be/nl/info/5e9d5a6cd93901b20b3a2b82/cookiebeleid' target='_blank'>cookieverklaring</a> als je er meer over wil weten.",
     "nonBlocking": false,
@@ -178,7 +178,7 @@
         "open": false,
         "cookies": [
           {
-            "cookie": "Youtube",
+            "cookie": "YouTube",
             "type": "Derde partij",
             "duration": "sessie - 6 maanden",
             "description": "Via de dienst YouTube kan je video’s bekijken die we op antwerpen.be plaatsen. YouTube zet mogelijk één of meerdere cookies op je computer om je surfgedrag te registreren en om voor jou relevante video’s te kunnen suggereren. Deze cookies worden gezet door YouTube en zijn noodzakelijk voor het gebruik van deze functionaliteit.",
@@ -250,6 +250,6 @@
         ]
       }
     ]
-  }`;
+  });
   </script>
 </html>

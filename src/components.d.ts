@@ -45,7 +45,7 @@ export namespace Components {
         /**
           * Set the translation strings for the cookie consent
          */
-        "translations": TranslationsInterface;
+        "translations": string;
     }
     interface AuiCookieContentBlocker {
         /**
@@ -67,7 +67,7 @@ export namespace Components {
         /**
           * Set the translation strings for the content blocker
          */
-        "translations": TranslationsInterface;
+        "translations": string;
     }
     interface AuiCookieTable {
         "data": any[];
@@ -171,7 +171,7 @@ declare namespace LocalJSX {
         /**
           * Set the translation strings for the cookie consent
          */
-        "translations"?: TranslationsInterface;
+        "translations"?: string;
     }
     interface AuiCookieContentBlocker {
         /**
@@ -193,7 +193,7 @@ declare namespace LocalJSX {
         /**
           * Set the translation strings for the content blocker
          */
-        "translations"?: TranslationsInterface;
+        "translations"?: string;
     }
     interface AuiCookieTable {
         "data"?: any[];

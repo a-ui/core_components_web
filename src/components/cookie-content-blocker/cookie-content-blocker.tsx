@@ -16,20 +16,21 @@ export class ContentBlocker {
   /** Extra CSS class(es) to add */
   @Prop() branding: string = 'aui';
   /** Set the translation strings for the content blocker */
-  @Prop() translations: TranslationsInterface;
+  @Prop() translations = '';
 
   @State() translationData: TranslationsInterface;
 
   componentWillLoad() {
-    this.handleTranslations(this.translations);
+    this.handleTranslations();
+    this.parseTranslationsProp(this.translations);
   }
 
   @Watch('translations')
-  translationsChanged(newValue: TranslationsInterface) {
-    this.handleTranslations(newValue);
+  parseTranslationsProp(newValue: string) {
+    if (newValue) this.handleTranslations(JSON.parse(newValue));
   }
 
-  handleTranslations(translations) {
+  handleTranslations(translations: TranslationsInterface = {}) {
     this.translationData = {
       ...contentBlockerTranslations,
       ...translations,
