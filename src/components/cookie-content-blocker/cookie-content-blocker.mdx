@@ -6,7 +6,11 @@ import * as CookieContentBlockerStory from './cookie-content-blocker.stories';
 # Cookie Content Blocker
 
 ```html
-<aui-cookie-content-blocker message="Video kon niet getoond worden" icon="Je moet je cookievoorkeuren aanpassen om deze video te kunnen afspelen." icon="ai-video-player"></aui-cookie-content-blocker>
+<aui-cookie-content-blocker
+  message="Video kon niet getoond worden"
+  translations="translationsObject"
+  description="Je moet je cookievoorkeuren aanpassen om deze video te kunnen afspelen."
+  icon="ai-video-player"></aui-cookie-content-blocker>
 ```
 
 ## Properties
@@ -16,7 +20,7 @@ import * as CookieContentBlockerStory from './cookie-content-blocker.stories';
 Example of translations JSON object:
 
 ```json
-{
+JSON.stringify({
   buttonOpenCookieSettings: "Open cookie-instellingen",
-}
+})
 ```

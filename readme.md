@@ -49,7 +49,7 @@ Use [one of our brandings](https://github.com/a-ui) to adhere to the styling gui
 
 ```html
 // Antwerp core branding
-<link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/6.4.0/main.min.css">
+<link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/6.5.0/main.min.css">
 
 If needed, you can add a branding-compatible [flexbox grid layout system](https://github.com/a-ui/core_flexboxgrid_scss):
 

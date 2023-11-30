@@ -19,7 +19,7 @@ export class CookieConsent {
   /** If set to true, the modal will show the cookie preferences and not the default screen with the title and description */
   @Prop() openPreferences: boolean;
   /** Set the translation strings for the cookie consent */
-  @Prop() translations: TranslationsInterface;
+  @Prop() translations: string;
   /** Set the current enovironment, this will impact the name of the cookie where the preferences will be saved. eg. 'acceptance' */
   @Prop() environment: string;
   /** Set the domain where you want your cookiepreferences to be saved. eg. 'antwerpen.be' */
@@ -41,8 +41,8 @@ export class CookieConsent {
   modalRef!: HTMLElement;
 
   componentWillLoad() {
-    this.handleTranslations(this.translations);
-    this.loadConfig();
+    this.handleTranslations();
+    this.loadConfigAndTranslations();
     this.checkEnvironment();
     this.checkCookie();
     this.checkExcludedPaths();
@@ -56,14 +56,14 @@ export class CookieConsent {
   }
 
   @Watch('config')
-  parseMyObjectProp(newValue: string) {
+  parseConfigProp(newValue: string) {
     if (newValue) this.configData = JSON.parse(newValue);
     this.checkedCategories = this.configData.cookieConfig;
   }
 
   @Watch('translations')
-  translationsChanged(newValue: TranslationsInterface) {
-    this.handleTranslations(newValue);
+  parseTranslationsProp(newValue: string) {
+    if (newValue) this.handleTranslations(JSON.parse(newValue));
   }
 
   @Watch('openPreferences')
@@ -107,13 +107,17 @@ export class CookieConsent {
     }
   }
 
-  loadConfig() {
+  loadConfigAndTranslations() {
     if (this.config) {
-      this.parseMyObjectProp(this.config);
+      this.parseConfigProp(this.config);
+    }
+
+    if (this.translations) {
+      this.parseTranslationsProp(this.translations);
     }
   }
 
-  handleTranslations(translations) {
+  handleTranslations(translations: TranslationsInterface = {}) {
     this.translationData = {
       ...cookieTranslations,
       ...translations,
@@ -141,7 +145,8 @@ export class CookieConsent {
       } else {
         cookiePreferences = [...cookiePreferences, {
           category: category.name,
-          accepted: (type === 'all' ? true : category.enabled)
+          accepted: (type === 'all' ? true : category.enabled),
+          ...(category.id) && {id: category.id},
         }];
       }
     })
