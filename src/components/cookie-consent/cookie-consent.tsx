@@ -145,7 +145,8 @@ export class CookieConsent {
       } else {
         cookiePreferences = [...cookiePreferences, {
           category: category.name,
-          accepted: (type === 'all' ? true : category.enabled)
+          accepted: (type === 'all' ? true : category.enabled),
+          ...(category.id) && {id: category.id},
         }];
       }
     })

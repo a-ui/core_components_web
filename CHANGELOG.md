@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+### Added
+- `cookie-content` Added an id to make it more simple to toggle cookie-related features on or off.
+
 ### Changed
 - `core` Upgraded to core branding v6.5.x
 
