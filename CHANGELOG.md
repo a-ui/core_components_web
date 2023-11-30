@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+
+## 3.1.0 - 2023-11-30
+
 ### Added
 - `cookie-content` Added an id to make it more simple to toggle cookie-related features on or off.
 
