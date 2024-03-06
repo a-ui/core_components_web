@@ -9,6 +9,9 @@ export const config: Config = {
 			includePaths: ["./node_modules/"],
     })
 	],
+  extras: {
+    enableImportInjection: true,
+  },
 	outputTargets: [
 		{
 			type: 'dist',
