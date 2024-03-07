@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## Unreleased
 
 
+## 3.1.1 - 2024-03-07
+
+### Fixed
+- `core` Enabled `enableImportInjection` flag to be able to use the library in Vite projects
+
+
 ## 3.1.0 - 2023-11-30
 
 ### Added
