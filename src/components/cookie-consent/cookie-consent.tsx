@@ -179,7 +179,7 @@ export class CookieConsent {
 
   checkCookiePolicy() {
     var cookiePolicy = !!this.configData.cookiePolicy
-      ? (<p><a href={this.configData.cookiePolicy} class="has-icon-right" target="_blank">{this.translationData.textCookiePolicy}<aui-icon name="ai-navigation-next" /></a></p>)
+      ? (<p><a href={this.configData.cookiePolicy}>{this.translationData.textCookiePolicy}</a></p>)
       : null;
     return cookiePolicy;
   }

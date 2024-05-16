@@ -1,16 +1,18 @@
 @use 'sass:math';
-@import '@a-ui/core/src/styles/quarks';
+@import '@a-ui/core/src/styles/quarks/_quarks.functions';
+@import '@a-ui/core/src/styles/quarks/_quarks.mixins';
+@import '@a-ui/core/src/styles/quarks/_quarks.variables';
 
 .m-overlay__inner {
   width: 100%;
-  max-width: calc(1.5rem * 25);
+  max-width: calc(var(--SPACER) * 25);
 }
 
 .m-cookie-consent {
 
   .m-modal__footer {
     flex-wrap: wrap;
-    gap: $spacer-xs;
+    gap: var(--SPACER-XS);
 
     .a-button:not(:first-child) {
       white-space: nowrap;
@@ -26,7 +28,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: $spacer;
+  gap: var(--SPACER);
   justify-content: space-between;
   width: 100%;
 
@@ -41,10 +43,10 @@
   }
 
   .a-switch__button {
-    margin-right: $spacer;
+    margin-right: var(--SPACER);
 
     &:before {
-      left: calc(100% - $spacer);
+      left: calc(100% - var(--SPACER));
     }
 
     &:after {
@@ -55,7 +57,7 @@
 
 .m-cookie-consent__category-detail {
   overflow: hidden;
-  padding-left: $spacer;
+  padding-left: var(--SPACER);
 
   .a-table-responsive-wrapper table {
     >tbody>tr>td,
@@ -82,15 +84,15 @@
   }
 
   tr.is-condensed {
-    height: var(--spacer-l);
+    height: var(--SPACER-L);
   }
 }
 
 .m-cookie-consent--non-blocking {
   background: #fff;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--BORDER-COLOR);
   bottom: 0;
-  box-shadow: 0 -$spacer 0 var(--box-shadow-color);
+  box-shadow: 0 calc(-1 * var(--SPACER)) 0 var(--BOX-SHADOW-COLOR);
   max-height: 50vh;
   overflow: auto;
   position: fixed;
@@ -101,26 +103,26 @@
 .m-cookie-consent__content {
   @include at($screen-md) {
     display: flex;
-    gap: $spacer;
+    gap: var(--SPACER);
   }
 }
 
 .m-modal__top-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacer-xs;
+  gap: var(--SPACER-XS);
   justify-content: space-between;
 }
 
 .m-cookie-consent__text {
-  padding-bottom: $spacer;
+  padding-bottom: var(--SPACER);
 }
 
 .m-cookie-consent__buttons {
   display: flex;
   flex-wrap: wrap;
   white-space: nowrap;
-  gap: $spacer-xs;
+  gap: var(var(--SPACER-XS));
 
   @include at($screen-md) {
     flex-direction: column;

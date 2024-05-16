@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## Unreleased
 
 
+## 3.2.0 - 2024-05-16
+
+### Changed
+- `cookie-content` The cookie policy link now opens in the same window
+- `core` Upgraded to core branding v6.6.x
+- `core` The cookie consent can now be used with other brandings
+
+
 ## 3.1.1 - 2024-03-07
 
 ### Fixed
