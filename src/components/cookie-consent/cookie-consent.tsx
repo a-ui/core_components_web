@@ -258,7 +258,7 @@ export class CookieConsent {
         <div class="m-modal__footer">
           <button class="a-button" onClick={(e) => this.handleAcceptAll(e)}>{this.translationData.buttonAccept}</button>
           <button class="a-button" onClick={(e) => this.handleAcceptOnlyNecessary(e)}>{this.translationData.buttonReject}</button>
-          <button class="a-button a-button--transparent" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
+          <button class="a-button" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
         </div>
       </div>
     )
@@ -306,7 +306,7 @@ export class CookieConsent {
               <div class="m-cookie-consent__buttons">
                 <button class="a-button" onClick={(e) => this.handleAcceptAll(e)}>{this.translationData.buttonAccept}</button>
                 <button class="a-button" onClick={(e) => this.handleAcceptOnlyNecessary(e)}>{this.translationData.buttonReject}</button>
-                <button class="a-button a-button--transparent" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
+                <button class="a-button" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
               </div>
             </div>
           </div>
