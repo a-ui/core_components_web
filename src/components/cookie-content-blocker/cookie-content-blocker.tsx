@@ -52,7 +52,7 @@ export class ContentBlocker {
             }
             <h3 class="h6">{this.message}</h3>
             <p class="u-margin-bottom-xs">{this.description}</p>
-            <button class="a-button a-button--transparent" onClick={() => this.openCookiePreferences()}>{this.translationData.buttonOpenCookieSettings}</button>
+            <button class="a-button" onClick={() => this.openCookiePreferences()}>{this.translationData.buttonOpenCookieSettings}</button>
           </div>
         </div>
       </Host>

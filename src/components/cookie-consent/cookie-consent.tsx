@@ -179,7 +179,7 @@ export class CookieConsent {
 
   checkCookiePolicy() {
     var cookiePolicy = !!this.configData.cookiePolicy
-      ? (<p><a href={this.configData.cookiePolicy} class="has-icon-right" target="_blank">{this.translationData.textCookiePolicy}<aui-icon name="ai-navigation-next" /></a></p>)
+      ? (<p><a href={this.configData.cookiePolicy}>{this.translationData.textCookiePolicy}</a></p>)
       : null;
     return cookiePolicy;
   }
@@ -258,7 +258,7 @@ export class CookieConsent {
         <div class="m-modal__footer">
           <button class="a-button" onClick={(e) => this.handleAcceptAll(e)}>{this.translationData.buttonAccept}</button>
           <button class="a-button" onClick={(e) => this.handleAcceptOnlyNecessary(e)}>{this.translationData.buttonReject}</button>
-          <button class="a-button a-button--transparent" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
+          <button class="a-button" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
         </div>
       </div>
     )
@@ -306,7 +306,7 @@ export class CookieConsent {
               <div class="m-cookie-consent__buttons">
                 <button class="a-button" onClick={(e) => this.handleAcceptAll(e)}>{this.translationData.buttonAccept}</button>
                 <button class="a-button" onClick={(e) => this.handleAcceptOnlyNecessary(e)}>{this.translationData.buttonReject}</button>
-                <button class="a-button a-button--transparent" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
+                <button class="a-button" onClick={() => this.handleShowPreferences()}>{this.translationData.buttonSetup}</button>
               </div>
             </div>
           </div>
