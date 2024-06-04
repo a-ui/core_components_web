@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## Unreleased
 
 
+## 3.2.1 - 2024-06-04
+
+### Fixed
+- `icon` Fixed a possible double load of the icons SVG file
+
+
 ## 3.2.0 - 2024-05-16
 
 ### Changed
