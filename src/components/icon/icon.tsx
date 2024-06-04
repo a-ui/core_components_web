@@ -25,9 +25,9 @@ export class Icon {
 
       const svgWrapper = document.createElement('svg');
 
-      svgWrapper.id = 'aiSvg';
+      svgWrapper.id = 'ai-svg';
       svgWrapper.innerHTML = svgText;
-      if(!document.getElementById('aiSvg')) {
+      if(!document.getElementById('ai-svg')) {
         document.body.appendChild(svgWrapper);
       }
     } catch(err) {
@@ -36,7 +36,7 @@ export class Icon {
   }
 
   render() {
-    if(typeof document !== 'undefined' && !document.getElementById('aiSvg')) {
+    if(typeof document !== 'undefined' && !document.getElementById('ai-svg')) {
       this.fetchAntwerpIcons();
     }
 
