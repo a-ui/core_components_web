@@ -122,7 +122,7 @@
   display: flex;
   flex-wrap: wrap;
   white-space: nowrap;
-  gap: var(var(--SPACER-XS));
+  gap: var(--SPACER-XS);
 
   @include at($screen-md) {
     flex-direction: column;

@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## Unreleased
 
 
+## 3.2.2 - 2025-07-31
+
+### Fixed
+- `cookie-consent` Fixed 'excludedpaths' property that wasn't working correctly
+
+
 ## 3.2.1 - 2024-06-04
 
 ### Fixed
@@ -18,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## 3.2.0 - 2024-05-16
 
 ### Changed
-- `cookie-content` The cookie policy link now opens in the same window
+- `cookie-consent` The cookie policy link now opens in the same window
 - `core` Upgraded to core branding v6.6.x
 - `core` The cookie consent can now be used with other brandings
 
@@ -32,13 +38,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## 3.1.0 - 2023-11-30
 
 ### Added
-- `cookie-content` Added an id to make it more simple to toggle cookie-related features on or off.
+- `cookie-consent` Added an id to make it more simple to toggle cookie-related features on or off.
 
 ### Changed
 - `core` Upgraded to core branding v6.5.x
 
 ### Fixed
-- `cookie-content` Fixed a bug in React where translations would not parse
+- `cookie-consent` Fixed a bug in React where translations would not parse
 - `cookie-content-blocker` Fixed a bug in React where translations would not parse
 
 

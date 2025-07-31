@@ -58,6 +58,7 @@
   cookieConsent.preferencesSaved = function (params) {
     console.log(params);
   }
+  cookieConsent.excludedpaths = JSON.stringify(['/test']);
   cookieConsent.translations = JSON.stringify({
     buttonAccept: "Alle cookies accepteren!",
     buttonReject: "Geen cookies voor mij!",

@@ -99,11 +99,16 @@ export class CookieConsent {
   }
 
   checkExcludedPaths() {
-    if(this.excludedpaths && this.excludedpaths.length > 0){
-      const excludedPaths = this.excludedpaths.split(",");
-      if(excludedPaths.indexOf(window.location.pathname) > -1) {
-        this.hideModal();
-      }
+    let paths;
+
+    try {
+      paths = JSON.parse(this.excludedpaths);
+    } catch {
+      paths = [this.excludedpaths];
+    }
+
+    if (Array.isArray(paths) && paths.includes(window.location.pathname)) {
+      this.hideModal();
     }
   }
 

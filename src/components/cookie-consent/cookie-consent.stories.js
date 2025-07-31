@@ -49,7 +49,7 @@ export default {
       },
       description: 'Set the domain where you want your cookiepreferences to be saved. eg. "antwerpen.be"',
 		},
-		excludePaths: {
+		excludepaths: {
 			control: { type: 'text' },
       table: {
         type: { summary: 'text' },
